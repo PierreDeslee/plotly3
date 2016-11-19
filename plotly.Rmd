@@ -1,0 +1,22 @@
+---
+title: "plotly"
+author: "Pierre Deslee"
+date: "19 novembre 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## plotly
+
+```{r plotly}
+
+library("devtools")
+library(plotly)
+p <- plot_ly(midwest, x = ~percollege, color = ~state, type = "box")  
+p 
+
+```
+
