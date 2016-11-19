@@ -1,0 +1,48 @@
+---
+title       : Week 3 Assignment
+subtitle    : 
+author      : Pierre Deslee  \n 19/11/16
+job         : Data Scientist
+date        : 19/11/16
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+
+
+---  plot #simple-plot
+
+## A Simple Plot ##
+
+Let us create a simple scatterplot.
+
+```{r simple-plot, fig.height = 6, fig.align = 'center', message = F}
+require(ggplot2)
+qplot(wt, mpg, data = mtcars)
+```
+
+---
+
+## Creation of plotly plot
+
+p <- plot_ly(midwest, x = ~percollege, color = ~state, type = "box")  
+p  
+htmlwidgets::saveWidget(plot_ly(p), "wp.html")  
+
+---
+
+## A plotly Plot view
+
+
+```{r wp, echo=FALSE, warning=FALSE, cache=FALSE, results='asis'}
+cat('<iframe src="./wp.html" width=100% height=10% allowtransparency="true"> </iframe>')
+```
+
+---
+
+## Thanks
+
+  
+---
